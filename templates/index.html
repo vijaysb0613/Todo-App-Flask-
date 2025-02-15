@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>Title Template</h1>
 {% endblock %}
 
 {% block body %}
 <div class="content">
-    <h1>Task Master</h1>
+    <h1 style="text-align: center; color: #3572EF; font-size: 2.5rem; margin-bottom: 10px;">
+    Task Master
+</h1>
+
+{% if tasks|length < 1 %}
+<h2 style="text-align: center; color: #888; font-size: 1.5rem; font-weight: 400;">
+    🚀 There are no tasks. Add One!
+</h2>
+    {%else%}
     <table>
         <tr>
             <th>
@@ -26,14 +33,12 @@
             <td>
               <a href="/delete/{{task.id}}">Delete</a>
                 <br>
-                <a href="">Update</a>
-            </td>
-            <td>
-
+                <a href="/update/{{task.id}}">Update</a>
             </td>
         </tr>
         {% endfor %}
     </table>
+    {% endif %}
     <form action="/" method="POST">
         <input type="text" name="content" id="content">
         <input type="submit" value="Add Task">
