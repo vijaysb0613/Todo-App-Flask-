@@ -1,4 +1,93 @@
-body{
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
 }
+
+/* Container */
+.content {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #3572EF;
+    color: white;
+}
+
+/* Buttons */
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+a[href*="Delete"] {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+a[href*="Update"] {
+    background-color: #3ABEF9;
+    color: white;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    background-color: #050C9C;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3572EF;
+}
+
